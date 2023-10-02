@@ -1,19 +1,24 @@
 #include <stdio.h>
-/*
-*This is a program that prints its name
-*@ using the main arguments
+
+/**
+* Main - This program prints its name even if the program is moved.
+*
+*@ argc: This is the augment counter
+*@ argv: This the augment vector to represent string pointer
+*
+* Return: Always 0
 */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 	{
 	/*checking if one argument is provided*/
-	if (argc>=1)
+	if (argc >= 1)
 	{
-	printf("Program name:%s\n",argv[0]);
+	printf("Program name:%s\n", argv[0]);
 	}
 	else
 	{
 		printf("No program name detected\n");
 	}
-	return 0;
+	return (0);
 	}
 
