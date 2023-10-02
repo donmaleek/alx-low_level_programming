@@ -1,55 +1,32 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-#include <ctype.h>
-/**
-  *num_check -check digits in strings
-  *@str: array string
-  *
-  *Return: Always 0(successful)
-  */
-int num_check(char *str)
-	{
-	unsigned int count;
 
-	count = 0;
-	while (count < strlen(str))
+/**
+ * main - This programs adds positive numbers i.e auguments
+ * @argc: This is the augument counter
+ * @argv: This is the augument vector
+ * Return: 0 on sucess, 1 on error
+ */
+
+int main(int argc, char *argv[])
+{
+	int i, j, sum = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-	if (!isdigit(str[count]))
+	for (j = 0; argv[i][j] != '\0'; j++)
 	{
-	return (0);
-	}
-	count++;
-	}
+	if (argv[i][j] < '0' || argv[i][j] > '9')
+	{
+	printf("Error\n");
 	return (1);
 	}
-/**
-  *main - print the name of the program
-  *@argc: This counts the auguments
-  *@argv: This is the vector aguments
-  *Return: Always 0(successful)
-  */
-int main(int argc, char *argv[])
-	{
-	int count;
-	int str_to_int;
-	int sum = 0;
+	}
 
-	count - 1;
-	while (count < argc)
-	{
-	if (num_check(argv[count]))
-	{
-	str_to_int - atoi(argv[count]);
-	sum + = str_to_int;
+	sum += atoi(argv[i]);
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
-	count++;
-	}
+
 	printf("%d\n", sum);
+
 	return (0);
-	}
+}
