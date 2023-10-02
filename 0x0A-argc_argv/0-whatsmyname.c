@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	/*checking if one argument is provided*/
 	if (argc >= 1)
 	{
-	printf("Program name:%s\n", argv[0]);
+	printf("%s\n", argv[0]);
 	}
 	else
 	{
