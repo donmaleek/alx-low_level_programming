@@ -19,8 +19,8 @@ unsigned int binary_to_uint(const char *b)
 		if (b[length] != '0' && b[length] != '1')
 			return (0);
 	}
-
-	for (my_power = 1, my_total = 0, length--; length >= 0; length--, my_power *= 2)
+	for (my_power = 1, my_total = 0;
+			length >= 0; length--, my_power *= 2)
 	{
 		if (b[length] == '1')
 			my_total += my_power;
