@@ -9,20 +9,19 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int my_total, my_power;
-	int length;
+	int L;
 
 	if (b == NULL)
-		return (0);
+	return (0);
 
-	for (length = 0; b[length]; length++)
+	for (L = 0; b[L]; L++)
 	{
-		if (b[length] != '0' && b[length] != '1')
+		if (b[L] != '0' && b[L] != '1')
 			return (0);
 	}
-for (my_power = 1, my_total = 0, length--; 
-		length >= 0; length--, my_power *= 2)
+	for (my_power = 1, my_total = 0, L--; L >= 0; L--, my_power *= 2)
 	{
-		if (b[length] == '1')
+		if (b[L] == '1')
 			my_total += my_power;
 	}
 
