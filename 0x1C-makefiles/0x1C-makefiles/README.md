@@ -1,5 +1,2 @@
-# C - Makefiles
-
-In this project, I practiced writing Makefiles.
-
-
+>> This is the makefile project>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
